@@ -1,0 +1,13 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+mail=E-post
+speaker=Foredragsholder
+notepad=Notater
+current=Publisert på forsiden
+title=Tittel på foredraget
+description=Beskrivelse av foredraget
+location=Hvor skal foredraget holdes?
+region=Region
+date=Når skal foredraget holdes?
+participants=Deltagere

@@ -1,0 +1,48 @@
+<script type="text/javascript" charset="utf-8">
+	$('#register').click(function(e) {
+		var eventId = $('#eventId').val();
+		var randomId = $('#randomId').val();
+		var code = $('#code').val();
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var howMany = $('#howMany').val();
+		$.post('@{signUpForEvent()}', {eventId : eventId, randomId : randomId, code : code, name: name, email: email, howMany: howMany}); 
+    });
+</script>
+<h3>Påmelding til møte...</h3>
+
+<p id="eventTitle"></p>
+
+
+<table border="0" cellspacing="5" cellpadding="5">
+	<tr>
+		<td class="label">Navn</td>
+		<td class="input" ><input type="text" name="name" id="name"/></td>
+	</tr>
+	<tr>
+		<td class="label">E-post</td>
+		<td class="input"/><input type="text" name="email" id="email"/></td>
+	</tr>
+	<tr>
+		<td class="label">Hvor mange melder du på?</td>
+		<td class="input"><input type="text" id="howMany" value="1" size="1"/></td>
+	</tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><hr></td>
+	</tr>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="input"><img src="@{Application.captcha(randomId)}" /><input type="hidden" name="randomId" value="${randomId}" /></td>
+	</tr>
+	<tr>
+		<td class="label">Skriv inn koden over</td>
+		<td class="input"><input type="text" name="code" id="code" value="" /></td>
+	</tr>
+
+</table>
+<span class="status"></span>
+<span style="float:right;"><input type="button" value="Registrer" id="register"/></span>
+

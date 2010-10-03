@@ -1,0 +1,11 @@
+Event(oslo):
+    title: Oracle OpenWorld Oppsummering
+    description: Torsdag 7.oktober vil det være en gjennomgang av hva som skjedde på Oracle OpenWorld 2010. Pizza fra 17.30.
+    region: OSLO
+    current: true
+    
+Event(trondheim):
+        title: Introduksjon til Scala
+        description: 22.april får vi besøk fra Fredrik Vraalsen og Alf Kristian Støyle fra Know IT, og de skal bruke et par timer på å gi oss en innføring i Scala.
+        region: TRONDHEIM
+        current: true

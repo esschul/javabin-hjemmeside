@@ -1,0 +1,236 @@
+#header {
+	margin-top: 0;
+	height: 30px;
+	background-color: #494949;
+}
+
+#nav {
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+	text-align: right;
+	font-size: 17px;
+	margin-top: 40px;
+	float: right;
+	color: #494949;
+}
+
+#nav a, ul {
+	color: #000;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	text-decoration: underline;
+}
+
+#nav ul {
+	list-style: none;
+}
+
+#nav ul li {
+	float: left;
+	margin-right: 12px;
+}
+
+#headline {
+	margin-top:20px;
+}
+
+#headline h2 {
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 50px;
+	margin-bottom: 0;
+}
+
+#headline p {
+	font-size: 25px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+
+#contentBox {
+	height: 350px;
+	background-image: url(photo1-fpo.jpg);
+	margin-top: 0;
+	-webkit-box-shadow: 2px 2px 5px #D4D4D4;
+	-moz-box-shadow: 2px 2px 5px #D4D4D4;
+	box-shadow: 2px 2px 5px #D4D4D4;
+	border: 3px solid white;
+}
+
+
+
+.lineItem {
+	margin-top: 50px;
+	height: 140px;
+	background-color: #ccc;
+	-webkit-box-shadow: 3px 3px 5px #D4D4D4;
+	-moz-box-shadow: 3px 3px 3px #D4D4D4;
+	box-shadow: 3px 3px 5px #D4D4D4;
+	outline: 3px solid white;
+	overflow: hidden;
+}
+
+.lineItemText {
+	margin-top: 70px;
+	color: #494949;
+}
+
+.lineItemText h2 {
+	font-family: 'Lobster13Regular', Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	margin-bottom: 0;
+}
+
+.lineItemText p {
+	font-size: 15px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+}
+
+
+.image {
+	position: relative;
+	width: 100%; /* for IE 6 */
+}
+
+.image .text {
+	position:absolute;
+	top:10px; 
+	left:180px;
+	width:300px;
+	font-size: 15px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	
+}
+
+.awesome {
+	background: #222 repeat-x;
+	display: inline-block;
+	padding: 5px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 1;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	position: relative;
+	cursor: pointer;
+}
+.awesome:hover { background-color: #111; color: #fff; }
+.awesome:active { top: 1px; }
+
+.jqifade{
+	position: absolute;
+	background-color: #aaaaaa;
+}
+div.jqi{
+	width: 400px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	position: absolute;
+	background-color: #ffffff;
+	font-size: 11px;
+	text-align: left;
+	border: solid 1px #eeeeee;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 7px;
+}
+div.jqi .jqicontainer{
+	font-weight: bold;
+}
+div.jqi .jqiclose{
+	position: absolute;
+	top: 4px; right: -2px;
+	width: 18px;
+	cursor: default;
+	color: #bbbbbb;
+	font-weight: bold;
+}
+div.jqi .jqimessage{
+	padding: 10px;
+	line-height: 20px;
+	color: #444444;
+}
+div.jqi .jqibuttons{
+	text-align: right;
+	padding: 5px 0 5px 0;
+	border: solid 1px #eeeeee;
+	background-color: #f4f4f4;
+}
+div.jqi button{
+	padding: 3px 10px;
+	margin: 0 10px;
+	background-color: #2F6073;
+	border: solid 1px #f4f4f4;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+}
+div.jqi button:hover{
+	background-color: #728A8C;
+}
+div.jqi button.jqidefaultbutton{
+	background-color: #BF5E26;
+}
+.jqiwarning .jqi .jqibuttons{
+	background-color: #BF5E26;
+}
+
+#simplemodal-overlay {background-color:#000;}
+#simplemodal-container {color:white; background-color:#333; border:8px solid #444; padding:12px;font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;}
+#simplemodal-container a.modalCloseImg {
+	background:url('/public/images/x.png'); no-repeat;
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+
+table{
+	width:100%;
+}
+td.label {
+	width:30%;
+}
+
+td.input {
+	width:30%;
+}
+
+#footer {
+	margin-top: 100px;
+	height: 30px;
+	background-color: #494949;
+}
+
+
+@font-face {
+	font-family: 'Lobster13Regular';
+	src: url('/public/fonts/Lobster_1.3-webfont.eot');
+	src: local('‚ò∫'), url('/public/fonts/Lobster_1.3-webfont.woff') format('woff'), url('/public/fonts/Lobster_1.3-webfont.ttf') format('truetype'), url('/public/fonts/Lobster_1.3-webfont.svg#webfontHqICmWr8') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CaviarDreamsRegular';
+	src: url('/public/fonts/CaviarDreams-webfont.eot');
+	src: local('‚ò∫'), url('/public/fonts/CaviarDreams-webfont.woff') format('woff'), url('/public/fonts/CaviarDreams-webfont.ttf') format('truetype'), url('/public/fonts/CaviarDreams-webfont.svg#webfontdHSnsI35') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
