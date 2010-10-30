@@ -14,6 +14,9 @@
     <content url="file:///Users/es/dev/tools/play-1.0.3.2/modules/secure">
       <sourceFolder url="file:///Users/es/dev/tools/play-1.0.3.2/modules/secure/app" isTestSource="false" />
     </content>
+    <content url="file:///Users/es/dev/tools/play-1.0.3.2/modules/maven-head">
+      <sourceFolder url="file:///Users/es/dev/tools/play-1.0.3.2/modules/maven-head/app" isTestSource="false" />
+    </content>
  
         <orderEntry type="inheritedJdk" />     
         <orderEntry type="module-library">

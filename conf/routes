@@ -6,7 +6,7 @@
 GET     /                                       Application.index
 GET 	/tidligere								Application.listOldEvents
 GET 	/om-javabin								Application.about
-GET 	/helter									Application.heroes
+GET 	/foredragsholdere						Application.lectureholders
 GET 	/medlemskap								Application.membership
 GET 	/kontakt-oss							Application.contact
 GET		/avregistrer/{id}						Application.regretSigningUp

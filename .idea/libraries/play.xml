@@ -3,9 +3,11 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../tools/play-1.0.3.2/framework" />
       <root url="file://$PROJECT_DIR$/../../tools/play-1.0.3.2/framework/lib" />
+      <root url="file://$PROJECT_DIR$/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../tools/play-1.0.3.2/framework" recursive="false" />
     <jarDirectory url="file://$PROJECT_DIR$/../../tools/play-1.0.3.2/framework/lib" recursive="false" />
   </library>

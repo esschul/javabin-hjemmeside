@@ -1,5 +1,13 @@
 #{extends 'main.html' /}
 #{set title:'www.java.no' /}
+#{list items:announcements, as:'announcement'}
+<div class="lineItemText grid_10">
+   <h2>${announcement?.title}</h2>
+    ${announcement?.description?.raw()}
+    <a class="awesome" href="${announcement?.url}">Les mer</a>
+</div>
+#{/list}
+
 
 	#{list items:events, as:'event'}		
 	<div class="lineItem grid_4">
@@ -18,7 +26,7 @@
 				minWidth: 330,
 				maxHeight:400,
 				maxWidth: 330
-				});$('#eventId').val(${event?.id});$('#eventTitle').html('${event?.region} : ${event?.title}');">Meld meg på >></a> 
+				});$('#eventId').val(${event?.id});$('#eventTitle').html('${event?.region} : ${event?.title}');">Meld meg på</a> 
 	</div>
 	<div class="clear"></div>
 	#{/list}

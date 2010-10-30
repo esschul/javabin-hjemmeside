@@ -1,24 +1,76 @@
 package controllers;
 
+import groovy.lang.Closure;
+import groovy.util.XmlSlurper;
+import groovy.util.slurpersupport.GPathResult;
+import org.apache.abdera.*;
+import org.apache.abdera.model.Document;
+import org.apache.abdera.model.Entry;
+import org.apache.abdera.model.Feed;
+import org.apache.abdera.model.Link;
+import org.apache.abdera.parser.*;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateUtils;
+import org.xml.sax.SAXException;
 import play.mvc.*;
 import play.libs.*;
 import play.cache.*;
 import play.data.validation.*;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.*;
 import models.*;
 import notifiers.*;
+import java.net.URL;
+
+import javax.xml.parsers.ParserConfigurationException;
 
 public class Application extends Controller {
 
     public static void index() {
-		List<Event> events = Event.findBy("current is true ");
+        List<Announcement> announcements;
+
+        announcements = getAnnouncements();
+
+        List<Event> events = Event.find("current is true ").fetch();
 		String randomId = Codec.UUID();
-        render(events, randomId);
+        render(announcements, events, randomId);
     }
 
-	public static void signUpForEvent(Long eventId, String randomId, String code, @Required @Email String email, @Required String name, @Required Integer howMany) {
+
+
+    private static List<Announcement> getAnnouncements() {
+        List<Announcement> announcements;
+        Abdera abdera;
+        Parser parser;
+        URL url;
+        Document<Feed> doc;
+        Feed feed;
+
+        announcements = new LinkedList<Announcement>();
+        abdera = new Abdera();
+        parser = abdera.getParser();
+
+        try {
+            url = new URL("http://wiki.java.no/createrssfeed.action?types=blogpost&sort=created&showContent=true&showDiff=true&spaces=javabin&labelString=forside&rssType=atom&maxResults=10&timeSpan=5&publicFeed=true&title=javaBin+RSS+Feed");
+
+            doc = parser.parse(url.openStream());
+            feed = doc.getRoot();
+
+            for (Entry entry : feed.getEntries()) {
+              announcements.add( new Announcement( entry.getTitle(), entry.getSummary(), entry.getLink("alternate").getHref().toString() ) );
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return announcements;
+    }
+    
+
+    public static void signUpForEvent(Long eventId, String randomId, String code, @Required @Email String email, @Required String name, @Required Integer howMany) {
 		validation.equals(code, Cache.get(randomId)).message("Feil kode!");
 		validation.match(howMany, "[1-9]").message("Feltet må være et siffer mellom 1 og 9");
 		if(!validation.hasErrors()) {
@@ -89,8 +141,7 @@ public class Application extends Controller {
 	
 	// todo : finn ut hvordan man router til statiske sider.
 	public static void about() { render(); }
-	public static void heroes() { render(); }
+	public static void lectureholders() { render(); }
 	public static void contact() { render(); }
-	public static void membership() { render(); }
 
 }
