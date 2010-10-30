@@ -1,0 +1,20 @@
+<html>
+	<head></head>
+	<body>	
+		<p>
+		Vi har registrert følgende informasjon:<br>
+		</p>
+		<p>
+		Referanse person : <strong>${participant?.name} (${participant?.email})</strong><br>
+		Tid og sted: <strong>${event?.location} - ${(event?.date).format('dd.MM.yyyy')}</strong> - <a href="http://maps.google.com/?q=${event?.location}">Link til kart</a><br>
+		Tema: <strong>${event?.title}</strong><br>
+		</p>
+		<p>
+		Dersom du angrer at du meldte deg på, vennligst klikk denne linken; <a href="http://localhost:9000/avregistrer/${crypto}">avregistrer.</a>
+		</p>
+		<p>
+		Mvh
+		javaBin
+		</p>
+</body>
+</html>

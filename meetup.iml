@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+    <component name="NewModuleRootManager" inherit-compiler-output="true">
+        <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
+        <orderEntry type="sourceFolder" forTests="false" />
+        <exclude-output />
+        <content url="file://$MODULE_DIR$">
+            <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
+            <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
+        </content> 
+            <content url="file:///Users/es/dev/tools/play-1.0.3.2/modules/crud">
+      <sourceFolder url="file:///Users/es/dev/tools/play-1.0.3.2/modules/crud/app" isTestSource="false" />
+    </content>
+    <content url="file:///Users/es/dev/tools/play-1.0.3.2/modules/secure">
+      <sourceFolder url="file:///Users/es/dev/tools/play-1.0.3.2/modules/secure/app" isTestSource="false" />
+    </content>
+ 
+        <orderEntry type="inheritedJdk" />     
+        <orderEntry type="module-library">
+            <library name="Project Libraries">
+                <CLASSES>
+                    <root url="file://$MODULE_DIR$/lib" />
+                </CLASSES>
+                <JAVADOC />
+                <SOURCES />
+                <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+            </library>
+        </orderEntry>
+        <orderEntry type="module-library">
+            <library name="PlayFramework Dependecies">
+                <CLASSES>
+                    <root url="file:///Users/es/dev/tools/play-1.0.3.2/framework/lib" />
+                </CLASSES>
+                <JAVADOC />
+                <SOURCES />
+                <jarDirectory url="file:///Users/es/dev/tools/play-1.0.3.2/framework/lib" recursive="false" />
+            </library>
+        </orderEntry>
+        <orderEntry type="module-library">
+            <library>
+                <CLASSES>
+                    <root url="jar:///Users/es/dev/tools/play-1.0.3.2/framework/play.jar!/" />
+                </CLASSES>
+                <JAVADOC />
+                <SOURCES />
+            </library>
+        </orderEntry>
+    </component>
+</module>

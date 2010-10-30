@@ -1,28 +1,5 @@
 #{extends 'main.html' /}
-#{set title:'Home' /}
-
-<body>
-<div id="header"></div>
-<div class="container_12">
-	
-	<div id="nav">
-		<ul>
-			<li><a href="">Tidligere møter</a></li>
-			<li><a href="">Om javaBin</a></li>
-			<li><a href="">javaZone.no</a></li>
-			<li><a href="">Medlemskap</a></li>
-			<li><a href="">Kontakt oss</a></li>
-		</ul>
-	</div>
-	
-	<div class="clear"></div>
-	
-	<div id="headline" class="grid_12">
-		<h2>javaBin</h2>
-		<p>Norges største community. Vi jobber sammen for å fremme kunnskap.</p>
-	</div>
-	
-	<div class="clear"></div>
+#{set title:'www.java.no' /}
 
 	#{list items:events, as:'event'}		
 	<div class="lineItem grid_4">
@@ -34,27 +11,16 @@
 	<div class="lineItemText grid_8">
 		<h2>${event?.title}</h2>
 		<p>${event?.description}  
+			<img src="/public/images/map.png" alt="kart" class="map"/>
 			<a class="awesome" id="awesome" href="javascript:" onclick="$('#registrering').modal({
 				overlayClose:true,
-				minHeight:340,
-				minWidth: 390,
-				maxHeight:340,
-				maxWidth: 390
-				});$('#eventId').val(${event?.id});$('#eventTitle').html('${event?.region} : ${event?.title}');">Meld meg på >></a></p></p>
+				minHeight:400,
+				minWidth: 330,
+				maxHeight:400,
+				maxWidth: 330
+				});$('#eventId').val(${event?.id});$('#eventTitle').html('${event?.region} : ${event?.title}');">Meld meg på >></a> 
 	</div>
 	<div class="clear"></div>
 	#{/list}
 
 	<input type="hidden" id="eventId" value=""/>
-	
-</div>
-
-<div id="footer"></div>
-
-
-<div style="display:none" id="registrering">
-	#{registrering /}
-</div>
-
-
-</body>

@@ -20,12 +20,24 @@
 		<td class="input" ><input type="text" name="name" id="name"/></td>
 	</tr>
 	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="input"><span class="infotxt">Kjekt for oss å vite hva du heter.</span></td>
+	</tr>
+	<tr>
 		<td class="label">E-post</td>
 		<td class="input"/><input type="text" name="email" id="email"/></td>
 	</tr>
 	<tr>
-		<td class="label">Hvor mange melder du på?</td>
+		<td class="label">&nbsp;</td>
+		<td class="input"><span class="infotxt">Påmeldingen sendes til deg på mail.</span></td>
+	</tr>
+	<tr>
+		<td class="label">Antall</td>
 		<td class="input"><input type="text" id="howMany" value="1" size="1"/></td>
+	</tr>
+	<tr>
+		<td class="label">&nbsp;</td>
+		<td class="input"><span class="infotxt">Hvor mange melder du på?</span></td>
 	</tr>
 	<tr>
 		<td colspan="2">&nbsp;</td>
@@ -38,7 +50,7 @@
 		<td class="input"><img src="@{Application.captcha(randomId)}" /><input type="hidden" name="randomId" value="${randomId}" /></td>
 	</tr>
 	<tr>
-		<td class="label">Skriv inn koden over</td>
+		<td class="label">Gjenta koden</td>
 		<td class="input"><input type="text" name="code" id="code" value="" /></td>
 	</tr>
 

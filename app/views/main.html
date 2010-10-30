@@ -15,6 +15,44 @@
         #{get 'moreScripts' /}
     </head>
     <body>
-        #{doLayout /}
+		<div id="header"></div>
+		<div class="container_12">
+
+			<div id="nav">
+				<ul>
+					<li><a href="/tidligere">Tidligere møter</a></li>
+					<li><a href="/om-javabin">Om javaBin</a></li>
+					<li><a href="http://www.javazone.no">javaZone.no</a></li>
+					<li><a href="/helter">Helter</a></li>
+					<li><a href="/medlemskap">Medlemskap</a></li>
+					<li><a href="/kontakt-oss">Kontakt oss</a></li>
+				</ul>
+			</div>
+
+			<div class="clear"></div>
+
+			<div id="headline" class="grid_12">
+				<h2><a href="/">javaBin</a></h2>
+				<p>Norges største community. Deling av kunnskap og sånt.</p>
+			</div>
+
+			<div class="clear"></div>
+	
+        	#{doLayout /}
+
+				<div class="clear"></div>
+
+			</div>
+
+			<div id="footer"></div>
+
+
+			<div style="display:none" id="registrering">
+				#{registrering /}
+			</div>
+
+
+			</body>	
+
     </body>
 </html>

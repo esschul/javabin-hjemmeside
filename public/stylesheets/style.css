@@ -18,6 +18,11 @@
 	text-decoration: none;
 }
 
+#headline a {
+	color: #000;
+	text-decoration: none;
+}
+
 #nav a:hover {
 	text-decoration: underline;
 }
@@ -109,6 +114,23 @@
 	
 }
 
+
+.image .hero {
+	position:absolute;
+	top:90px; 
+	left:10px;
+	width:300px;
+	font-size: 13px;
+	font-family: 'CaviarDreamsRegular', Helvetica, sans-serif;
+	color: white;
+	font-weight: bold;
+	letter-spacing: -1px;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px;
+}
+
+
 .awesome {
 	background: #222 repeat-x;
 	display: inline-block;
@@ -128,6 +150,15 @@
 }
 .awesome:hover { background-color: #111; color: #fff; }
 .awesome:active { top: 1px; }
+
+.map {
+	width:25px; 
+	vertical-align:middle;
+}
+
+.map:active {
+	top:2px;
+}
 
 .jqifade{
 	position: absolute;
@@ -205,11 +236,18 @@ table{
 	width:100%;
 }
 td.label {
-	width:30%;
+	text-align:right;
+	padding-right:10px;
+	width:15%;
 }
 
 td.input {
 	width:30%;
+}
+
+span.infotxt {
+	font-size:90%;
+	color:#CCC;
 }
 
 #footer {
